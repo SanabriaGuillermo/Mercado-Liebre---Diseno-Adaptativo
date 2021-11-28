@@ -1,0 +1,197 @@
+:root{
+    --color-amarillo : #eac926;
+    --color-azul : #03264C;
+    --color-celeste : #1259c3;
+    --color-gris-oscuro : #666;
+    --color-gris-claro : #ebebeb;
+    --color-verde : #39b54a;
+    --font-roboto : 'Roboto', sans-serif;
+    --size-texto : 12px;
+    --size-titulares : 24px;
+    --size-precios : 18px;
+    --size-descuentos-descripciones : 16px;    
+}
+/*********************/
+/* GENERAL */
+/*********************/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style: none;    
+}
+a{
+     text-decoration: none;
+     color: black;
+}
+body{
+    font-family: var(--font-roboto);
+    background-color: var(--color-gris-claro);
+}
+/*********************/
+/* HEADER */
+/*********************/
+header{
+    background-color: var(--color-amarillo);
+    font-size: var(--size-texto);
+    padding-bottom: 10px;
+}
+header #logo{
+    width: 130px;
+    margin-left: 25px;
+    padding-top: 25px;
+    margin-bottom: 15px;
+}
+.search-bar{
+    margin-left: 15px;
+    display: inline-block;
+    margin-right: -15px;        
+}
+
+.nav-bar{
+    display: none;
+}
+header p{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#top-list{
+    margin-bottom : 10px;
+}
+
+.burger-menu{    
+    background-color: var(--color-celeste);
+    padding: 8px;
+    width: 15px;
+    color: white;
+    border-radius: 5px;
+    /* margin-top: 20px;
+    margin-left: 140px; */
+    margin: 20px auto 0 auto;
+    text-align: center;              
+}
+/*********************/
+/* MAIN */
+/*********************/
+main{
+    margin: 0 auto;
+    width: 90%;
+    /*padding: 10px;*/
+}
+.products h3{
+    color: var(--color-gris-oscuro);
+    margin-bottom: 15px;
+}
+section article{    
+    background-color: white;
+    margin-bottom: 10px;
+}
+.product-characteristics{
+    border-top: solid 1px var(--color-gris-claro);
+    padding: 15px;
+    position: relative;
+}
+.truck{
+    /*Este es el camino corto del profe*/
+    /*Ventaja: menos codigo y el circulo se mantiene aunque cambie el tamaño de pantalla*/
+    color: var(--color-verde);
+    border: solid 1px var(--color-verde);
+    width: fit-content; /*--se ajusta al contenido-- deja como ancho, solo el tamaño del contenido*/
+    padding: 10px;
+    border-radius: 50%;
+    /*position*/
+    position: absolute;
+    right: 25px;
+    top: -20px;
+        
+
+    /*Asi lo hize por mi cuenta*/ 
+
+    /* color: var(--color-verde);
+    font-size: 13px;
+    text-align: center;
+    margin-right: 85%;
+    padding: 4%;
+    border: solid 1px var(--color-verde);
+    border-radius: 100px; */
+}
+article .price{
+    font-size:var(--size-precios);
+}
+article .discount{
+    font-size: var(--size-descuentos-descripciones);
+    color: var(--color-verde);
+}
+article .product-name{
+    display: none;
+    font-size: var(--size-descuentos-descripciones);
+    color: var(--color-gris-oscuro);
+    margin-top: 20px;
+}
+
+/*********************/
+/* FOOTER */
+/*********************/
+footer{
+    background-color: white;
+    padding-top: 40px;
+}
+.pie-de-pagina{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.pie-de-pagina h5{
+    font-size: 16px;
+    text-align: center;
+}
+.pie-de-pagina p{
+    font-size: 12px;
+    color: var(--color-gris-oscuro);
+    text-align: center;
+}
+.credit-card, .gift, .user-shield{    
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-celeste);
+    margin-bottom: 10px;
+}
+.copyright{
+    text-align: left;
+    font-size: 12px;
+    color: var(--color-gris-oscuro);
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+
+/***********MEDIA QUERIES***********/
+/*TABLET*/
+@media(min-width:361px){
+    section article{
+        box-shadow:0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+
+    /*********************/
+    /* HEADER */
+    /*********************/
+    .nav-bar{
+        display: block;
+    }
+    .burger-menu{ 
+        display: none;                  
+    }
+
+    /*********************/
+    /* MAIN */
+    /*********************/
+    article .product-name{
+        display: block;
+    }   
+}
+
+/*DESKTOP*/
+@media(min-width:769px){    
+
+}
